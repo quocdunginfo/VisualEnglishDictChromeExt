@@ -1,0 +1,29 @@
+{
+"name": "quocdunginfo",
+"description": "Test PLugin",
+"omnibox": {
+"keyword": "dapi"
+},
+"icons": {
+"16": "icon.png"
+},
+"background": {
+	"scripts": ["background.js"],
+	"persistent": true
+},
+"content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "tabs"
+  ],
+"version": "1.0",
+"minimum_chrome_version": "9",
+"manifest_version": 2
+}
